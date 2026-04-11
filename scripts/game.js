@@ -30,7 +30,7 @@ function startGame() {
     document.getElementById('game-section').classList.remove('d-none');
     document.getElementById('welcomeMsg').innerText = `Run for your life, ${getPlayerData()}!`;
     
-    horrorQuestions.sort(() => Math.random() - 0.5); // Randomization Requirement
+    horrorQuestions.sort(() => Math.random() - 0.5);
     renderQuestion();
     console.log("EASTER EGG: Use revealAnswer() to cheat death.");
 }
