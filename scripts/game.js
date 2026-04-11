@@ -1,4 +1,4 @@
-import { savePlayerData, getPlayerData } from './storage.js';
+import { savePlayerData, getPlayerData } from './storage.js'; 
 
 const horrorQuestions = [
     { q: "Who is the killer in 'Halloween'?", a: "Michael Myers", options: ["Michael Myers", "Jason Voorhees", "Freddy Krueger"] },
