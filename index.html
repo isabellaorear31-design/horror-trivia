@@ -22,31 +22,30 @@
 
     <main class="container my-5">
         <section id="setup-section" class="row justify-content-center">
-            <div class="col-md-6 card bg-secondary p-4 shadow-lg">
+            <div class="col-md-6 card bg-secondary p-4 shadow-lg border-danger">
                 <form id="settingsForm" novalidate>
-                    <h2 class="text-center mb-4">Survivor Registration</h2>
+                    <h2 class="text-center mb-4 text-white">Survivor Registration</h2>
                     <div class="mb-3">
-                        <label for="playerName" class="form-label">Survivor Name:</label>
+                        <label for="playerName" class="form-label text-white">Survivor Name:</label>
                         <input type="text" class="form-control" id="playerName" required minlength="2">
-                        <div class="invalid-feedback">You must have a name to be on the casualty list.</div>
+                        <div class="invalid-feedback text-warning">You must have a name to be on the list.</div>
                     </div>
-                    <button type="submit" class="btn btn-danger w-100">Enter the Woods</button>
+                    <button type="submit" class="btn btn-danger w-100">ENTER THE WOODS</button>
                 </form>
             </div>
         </section>
 
         <section id="game-section" class="d-none text-center">
-            <h2 id="displayUser" class="mb-4"></h2>
+            <h2 id="welcomeMsg" class="mb-4"></h2>
             
-            <div class="progress mb-4" style="height: 35px; background-color: #333;">
+            <div class="progress mb-4" style="height: 35px; background-color: #111;">
                 <div id="slasherBar" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" 
-                     role="progressbar" aria-label="Slasher Distance" style="width: 0%">
+                     role="progressbar" aria-label="Slasher Distance" style="width: 0%" aria-live="polite">
                      SLASHER DISTANCE
                 </div>
             </div>
 
-            <div id="quiz-container" class="p-4 border border-danger rounded bg-black shadow">
-                </div>
+            <div id="quiz-container" class="p-4 border border-danger rounded bg-black shadow"></div>
         </section>
     </main>
 
@@ -54,12 +53,12 @@
         <div class="modal-dialog">
             <div class="modal-content bg-dark text-light border-danger">
                 <div class="modal-header border-danger">
-                    <h5 class="modal-title">Survival Rules</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title text-danger">Survival Rules</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <img src="images/slasher-icon.png" alt="Slasher" style="width: 50px;" class="mb-3">
-                    <p>Answer correctly to stay ahead. Every mistake brings the Slasher closer. Fill the bar, and it's game over!</p>
+                    <img src="images/slasher-icon.png" alt="Slasher" style="width: 80px;" class="mb-3">
+                    <p>Every wrong answer brings the Slasher closer. If the bar hits 100%, you're dead!</p>
                 </div>
             </div>
         </div>
@@ -74,7 +73,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="scripts/game.js"></script>
 </body>
 </html>
