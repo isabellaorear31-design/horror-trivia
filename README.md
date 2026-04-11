@@ -3,7 +3,7 @@
 **Developer:** Isabella O'Rear
 
 ## Project Objective
-The goal of this project is to test the player's knowledge of classic horror cinema in a high-stakes environment. Players must answer questions correctly to stay ahead of the "Slasher."
+The goal of this project is to test the player's knowledge of classic horror movies in a high-stakes environment. Players must answer questions correctly to stay ahead of the "Slasher."
 
 ## Game Rules
 1. Enter your name and click "Enter the Woods" to begin.
