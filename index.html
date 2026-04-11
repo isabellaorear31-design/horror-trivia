@@ -10,61 +10,65 @@
 </head>
 <body class="bg-dark text-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">FINAL GIRL</a>
             <div class="d-flex">
-                <button class="btn btn-outline-light me-2" id="resetBtn">Reset</button>
-                <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#infoModal">How to Play</button>
+                <button class="btn btn-outline-light me-2" id="resetBtn">Reset Game</button>
+                <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#helpModal">How to Play</button>
             </div>
         </div>
     </nav>
 
     <main class="container my-5">
-        <div id="setup-area" class="row justify-content-center">
-            <div class="col-md-6 border border-danger p-4 rounded">
+        <section id="setup-section" class="row justify-content-center">
+            <div class="col-md-6 card bg-secondary p-4 shadow-lg">
                 <form id="settingsForm" novalidate>
-                    <h3>Enter your Name, Survivor</h3>
+                    <h2 class="text-center mb-4">Survivor Registration</h2>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="playerName" placeholder="Name" required minlength="2">
-                        <div class="invalid-feedback">You must enter a name to begin.</div>
+                        <label for="playerName" class="form-label">Survivor Name:</label>
+                        <input type="text" class="form-control" id="playerName" required minlength="2">
+                        <div class="invalid-feedback">You must have a name to be on the casualty list.</div>
                     </div>
-                    <button type="submit" class="btn btn-danger w-100">Start Survival</button>
+                    <button type="submit" class="btn btn-danger w-100">Enter the Woods</button>
                 </form>
             </div>
-        </div>
+        </section>
 
-        <div id="game-area" class="d-none text-center">
-            <h2 id="welcomeMsg" class="mb-4"></h2>
+        <section id="game-section" class="d-none text-center">
+            <h2 id="displayUser" class="mb-4"></h2>
             
-            <div class="progress mb-4" style="height: 25px;">
+            <div class="progress mb-4" style="height: 35px; background-color: #333;">
                 <div id="slasherBar" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" 
-                     role="progressbar" style="width: 0%">SLASHER DISTANCE</div>
+                     role="progressbar" aria-label="Slasher Distance" style="width: 0%">
+                     SLASHER DISTANCE
+                </div>
             </div>
 
-            <div id="quiz-container" class="bg-black p-5 border rounded border-secondary">
+            <div id="quiz-container" class="p-4 border border-danger rounded bg-black shadow">
                 </div>
-        </div>
+        </section>
     </main>
 
-    <div class="modal fade" id="infoModal" tabindex="-1">
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content bg-dark text-light border-danger">
-                <div class="modal-header">
-                    <h5 class="modal-title">Survival Guide</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                <div class="modal-header border-danger">
+                    <h5 class="modal-title">Survival Rules</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    Answer correctly to survive. Every mistake brings the Slasher closer. If the bar fills up, you're toast!
+                <div class="modal-body text-center">
+                    <img src="images/slasher-icon.png" alt="Slasher" style="width: 50px;" class="mb-3">
+                    <p>Answer correctly to stay ahead. Every mistake brings the Slasher closer. Fill the bar, and it's game over!</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="text-center py-4 border-top border-danger mt-5">
-        <p>Created by <a href="https://github.com/isabellaorear31-design" class="text-danger">Isabella O'Rear</a></p>
+    <footer class="container py-4 border-top border-danger mt-5 text-center">
+        <p>Developed by <a href="https://github.com/isabellaorear31-design" class="text-danger">Isabella O'Rear</a></p>
         <div class="d-flex justify-content-center gap-3">
-            <a href="https://github.com/isabellaorear31-design/horror-trivia" class="text-info">Repo</a>
+            <a href="https://github.com/isabellaorear31-design/horror-trivia" class="btn btn-sm btn-outline-secondary">Repo</a>
             <a href="https://validator.w3.org/nu/?doc=https://isabellaorear31-design.github.io/horror-trivia/" class="text-info">Nu HTML</a>
             <a href="https://wave.webaim.org/report#/https://isabellaorear31-design.github.io/horror-trivia/" class="text-info">WAVE</a>
         </div>
