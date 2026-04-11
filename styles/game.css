@@ -1,54 +1,30 @@
 :root {
-    --blood-red: #880808;
-    --void-black: #050505;
-    --ghastly-gray: #212529;
-    --standard-padding: 20px;
+    --blood-red: #8b0000;
+    --night-black: #0d0d0d;
+    --spooky-white: #f5f5f5;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--void-black);
-    color: white;
+    background-color: var(--night-black);
+    font-family: 'Creepster', cursive; /* Google Font Requirement */
 }
 
 
-h2, h3, .navbar-brand {
-    font-family: 'Creepster', cursive;
-    color: var(--blood-red);
-    text-shadow: 2px 2px 4px #000;
+img[src*="slasher"] {
+    filter: drop-shadow(0 0 10px var(--blood-red));
 }
 
 
-button[type="submit"] {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+#quiz-container button:nth-child(even) {
+    border-color: var(--blood-red);
 }
 
-h3 + p {
-    margin-top: var(--standard-padding);
-}
-
-.btn-outline-danger:hover {
-    background-color: var(--blood-red) !important;
-    box-shadow: 0 0 15px var(--blood-red);
+.progress {
+    border: 2px solid var(--blood-red);
 }
 
 @media (prefers-reduced-motion: reduce) {
     .progress-bar-animated {
-        animation: none !important;
-        transition: none !important;
+        animation: none;
     }
-}
-
-
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 80vh;
-}
-
-#quiz-container {
-    margin-top: 2rem;
-    transition: transform 0.3s ease;
 }
