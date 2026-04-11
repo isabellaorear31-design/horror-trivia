@@ -1,1 +1,54 @@
+:root {
+    --blood-red: #880808;
+    --void-black: #050505;
+    --ghastly-gray: #212529;
+    --standard-padding: 20px;
+}
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--void-black);
+    color: white;
+}
+
+
+h2, h3, .navbar-brand {
+    font-family: 'Creepster', cursive;
+    color: var(--blood-red);
+    text-shadow: 2px 2px 4px #000;
+}
+
+
+button[type="submit"] {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h3 + p {
+    margin-top: var(--standard-padding);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--blood-red) !important;
+    box-shadow: 0 0 15px var(--blood-red);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .progress-bar-animated {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+#quiz-container {
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
