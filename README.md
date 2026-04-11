@@ -13,6 +13,7 @@ The goal of this project is to test the player's knowledge of classic horror cin
 
 ## Technologies Used
 * **HTML5:** Semantic landmark elements for accessibility.
+* **Gemini:** For structural help. 
 * **Bootstrap 5:** Navbar, Modal, Progress Bar, and Grid layout.
 * **CSS3:** Custom variables, Google Fonts (Creepster), and advanced attribute selectors.
 * **JavaScript (ES Modules):** Modular logic for game state and web storage.
@@ -30,7 +31,6 @@ The goal of this project is to test the player's knowledge of classic horror cin
 In this snippet from `scripts/game.js`, I use an arrow function with the `sort()` method to satisfy the **Randomization** requirement. By returning a random number subtracted by 0.5, the array elements are shuffled in a random order every time the game starts.
 
 ```javascript
-// Requirement #6: Randomization logic
 function startGame() {
     // Shuffles the question array randomly
     horrorQuestions.sort(() => Math.random() - 0.5); 
