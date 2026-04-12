@@ -1,11 +1,11 @@
 import { savePlayerData, getPlayerData } from './storage.js'; 
 
 const horrorQuestions = [
-    { q: "In 'IT', what is the name of the town in Maine where Pennywise lives?", b: "Derry", options: ["Castle Rock", "Derry", "Haddonfield"] },
-    { q: "In 'Hereditary', what is the name of the demon king that the cult is attempting to summon into a male host?", c: "Paimon", options: ["Buer", "Pazuzu", "Paimon"] },
+    { q: "In 'IT', what is the name of the town in Maine where Pennywise lives?", a: "Derry", options: ["Derry", "Castle Rock", "Haddonfield"] },
+    { q: "In 'Hereditary', what is the name of the demon king that the cult is attempting to summon into a male host?", a: "Paimon", options: ["Paimon", "Pazuzu", "Buer"] },
     { q: "What is the hotel in 'The Shining'?", a: "Overlook", options: ["Overlook", "Bates", "Hill House"] },
-    { q: "In 'Scream 4', who are the two killers operating under the Ghostface mask?", b: "Jill Roberts & Charlie Walker", options: ["Kirby Reed & Trevor Sheldon", "Jill Roberts & Charlie Walker", "Emma Roberts & Rory Culkin"] },
-    { q: "In 'The Blair Witch Project', the students are filming a documentary about a local legend in which Maryland woods?", c: "Black Hills Forest", options: ["Redwood National Park", "Camp Crystal Lake", "Black Hills Forest"] }
+    { q: "In 'Scream 4', who are the two killers operating under the Ghostface mask?", a: "Jill Roberts & Charlie Walker", options: ["Jill Roberts & Charlie Walker", "Kirby Reed & Trevor Sheldon", "Emma Roberts & Rory Culkin"] },
+    { q: "In 'The Blair Witch Project', the students are filming a documentary about a local legend in which Maryland woods?", a: "Black Hills Forest", options: ["Black Hills Forest", "Camp Crystal Lake", "Redwood National Park"] }
 ];
 
 let currentScore = 0;
