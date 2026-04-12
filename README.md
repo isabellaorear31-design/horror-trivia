@@ -1,5 +1,5 @@
 # Final Girl: Horror Trivia
-**Date:** April 13, 2026  
+**Date:** April 12, 2026  
 **Developer:** Isabella O'Rear
 
 ## Project Objective
