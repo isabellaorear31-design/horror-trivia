@@ -1,11 +1,11 @@
 import { savePlayerData, getPlayerData } from './storage.js'; 
 
 const horrorQuestions = [
-    { q: "Who is the killer in 'Halloween'?", a: "Michael Myers", options: ["Michael Myers", "Jason Voorhees", "Freddy Krueger"] },
-    { q: "Which movie features Chucky?", a: "Child's Play", options: ["Annabelle", "Child's Play", "IT"] },
+    { q: "In 'IT', what is the name of the town in Maine where Pennywise lives?", b: "Derry", options: ["Castle Rock", "Derry", "Haddonfield"] },
+    { q: "In 'Hereditary', what is the name of the demon king that the cult is attempting to summon into a male host?", c: "Paimon", options: ["Buer", "Pazuzu", "Paimon"] },
     { q: "What is the hotel in 'The Shining'?", a: "Overlook", options: ["Overlook", "Bates", "Hill House"] },
-    { q: "What is the killer's name in 'Scream'?", a: "Ghostface", options: ["Ghostface", "Pinhead", "Leatherface"] },
-    { q: "Which film features the line 'They're coming to get you, Barbara'?", a: "Night of the Living Dead", options: ["Night of the Living Dead", "Evil Dead", "The Fog"] }
+    { q: "In 'Scream 4', who are the two killers operating under the Ghostface mask?", b: "Jill Roberts & Charlie Walker", options: ["Kirby Reed & Trevor Sheldon", "Jill Roberts & Charlie Walker", "Emma Roberts & Rory Culkin"] },
+    { q: "In 'The Blair Witch Project', the students are filming a documentary about a local legend in which Maryland woods?", c: "Black Hills Forest", options: ["Redwood National Park", "Camp Crystal Lake", "Black Hills Forest"] }
 ];
 
 let currentScore = 0;
