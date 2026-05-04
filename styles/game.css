@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 :root {
     --blood-red: #8b0000;
     --night-black: #0d0d0d;
@@ -6,7 +7,7 @@
 
 body {
     background-color: var(--night-black);
-    font-family: 'Creepster', cursive; /* Google Font Requirement */
+    font-family: 'Creepster', cursive; 
 }
 
 
