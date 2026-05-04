@@ -118,7 +118,7 @@ if (suggestionForm) {
         e.preventDefault();
         const email = e.target.elements['user-email'].value;
         
-        // Package this data as JSON to satisfy the rubric requirement
+        
         const signupData = {
             email: email,
             status: "Subscribed",
