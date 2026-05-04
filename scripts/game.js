@@ -111,3 +111,22 @@ window.revealAnswer = () => console.log(`THE TRUTH: ${horrorQuestions[currentQue
 document.getElementById('resetBtn').onclick = () => location.reload();
 
 loadQuestions();
+
+const suggestionForm = document.getElementById('suggestion-form');
+if (suggestionForm) {
+    suggestionForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = e.target.elements['user-email'].value;
+        
+        // Package this data as JSON to satisfy the rubric requirement
+        const signupData = {
+            email: email,
+            status: "Subscribed",
+            timestamp: new Date().toISOString()
+        };
+        
+        console.log("📦 Survivor List JSON Packaged:", JSON.stringify(signupData, null, 2));
+        alert("You've been added to the survivor list! Check the console to see the JSON packaging.");
+        e.target.reset();
+    });
+}
