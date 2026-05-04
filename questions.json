@@ -1,0 +1,27 @@
+[
+  {
+    "q": "Who is the killer in 'Halloween'?",
+    "a": "Michael Myers",
+    "options": ["Michael Myers", "Jason Voorhees", "Freddy Krueger"]
+  },
+  {
+    "q": "Which movie features Chucky?",
+    "a": "Child's Play",
+    "options": ["Annabelle", "Child's Play", "IT"]
+  },
+  {
+    "q": "What is the hotel in 'The Shining'?",
+    "a": "Overlook",
+    "options": ["Overlook", "Bates", "Hill House"]
+  },
+  {
+    "q": "What is the killer's name in 'Scream'?",
+    "a": "Ghostface",
+    "options": ["Ghostface", "Pinhead", "Leatherface"]
+  },
+  {
+    "q": "Which film features the line 'They're coming to get you, Barbara'?",
+    "a": "Night of the Living Dead",
+    "options": ["Night of the Living Dead", "Evil Dead", "The Fog"]
+  }
+]
