@@ -1,16 +1,39 @@
-import { savePlayerData, getPlayerData } from './storage.js'; 
+import { savePlayerData, getPlayerData } from './storage.js';
 
-const horrorQuestions = [
-    { q: "Who is the killer in 'Halloween'?", a: "Michael Myers", options: ["Michael Myers", "Jason Voorhees", "Freddy Krueger"] },
-    { q: "Which movie features Chucky?", a: "Child's Play", options: ["Annabelle", "Child's Play", "IT"] },
-    { q: "What is the hotel in 'The Shining'?", a: "Overlook", options: ["Overlook", "Bates", "Hill House"] },
-    { q: "What is the killer's name in 'Scream'?", a: "Ghostface", options: ["Ghostface", "Pinhead", "Leatherface"] },
-    { q: "Which film features the line 'They're coming to get you, Barbara'?", a: "Night of the Living Dead", options: ["Night of the Living Dead", "Evil Dead", "The Fog"] }
-];
 
+let horrorQuestions = []; 
 let currentScore = 0;
 let slasherDistance = 0;
 let currentQuestionIndex = 0;
+
+
+async function loadQuestions() {
+    try {
+        const response = await fetch('./questions.json');
+        if (!response.ok) throw new Error("Network response was not ok");
+        horrorQuestions = await response.json();
+        
+     
+        sessionStorage.setItem('lastSessionStart', new Date().toLocaleTimeString());
+        
+        console.log("Horror data loaded. Ready to play.");
+    } catch (error) {
+        console.error("Critical Error: Could not load questions.json", error);
+    }
+}
+
+
+function packageFormData(nameValue) {
+    const sessionData = {
+        player: nameValue,
+        action: "Started Game",
+        timestamp: new Date().toISOString(),
+        gameType: "Horror Trivia"
+    };
+    
+    
+    console.log("📦 Form Data Packaged as JSON:", JSON.stringify(sessionData, null, 2));
+}
 
 const settingsForm = document.getElementById('settingsForm');
 
@@ -21,6 +44,10 @@ settingsForm.addEventListener('submit', (e) => {
         return;
     }
     const name = document.getElementById('playerName').value;
+    
+
+    packageFormData(name);
+    
     savePlayerData(name);
     startGame();
 });
@@ -30,17 +57,26 @@ function startGame() {
     document.getElementById('game-section').classList.remove('d-none');
     document.getElementById('welcomeMsg').innerText = `Run for your life, ${getPlayerData()}!`;
     
+  
     horrorQuestions.sort(() => Math.random() - 0.5);
     renderQuestion();
+    
     console.log("EASTER EGG: Use revealAnswer() to cheat death.");
+    console.log("Session started at:", sessionStorage.getItem('lastSessionStart'));
 }
 
 function renderQuestion() {
     const container = document.getElementById('quiz-container');
     const data = horrorQuestions[currentQuestionIndex];
+    
+    if (!data) return; 
+
     container.innerHTML = `<h3 class="creepster-font text-danger mb-4">${data.q}</h3>`;
     
-    data.options.sort(() => Math.random() - 0.5).forEach(opt => {
+    
+    const shuffledOptions = [...data.options].sort(() => Math.random() - 0.5);
+    
+    shuffledOptions.forEach(opt => {
         const btn = document.createElement('button');
         btn.className = "btn btn-outline-light m-2 w-75 py-2";
         btn.innerText = opt;
@@ -69,5 +105,9 @@ function handleChoice(choice, correct) {
     }
 }
 
+
 window.revealAnswer = () => console.log(`THE TRUTH: ${horrorQuestions[currentQuestionIndex].a}`);
+
 document.getElementById('resetBtn').onclick = () => location.reload();
+
+loadQuestions();
