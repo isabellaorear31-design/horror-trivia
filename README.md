@@ -76,3 +76,6 @@ async function loadQuestions() {
 ### **Future Improvements**
 All planned updates, feature ideas, and known issues are tracked in the milestone below:
 👉 [Sprint 99 Milestone](https://github.com/isabellaorear31-design/horror-trivia/milestones)
+
+## **Contact**
+Isabella O'Rear - [LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN-NAME-HERE)
