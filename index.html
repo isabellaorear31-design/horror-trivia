@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Girl: Horror Trivia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/game.css">
 </head>
 <body class="bg-dark text-light">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">FINAL GIRL</a>
+            <a class="navbar-brand creepster-font" href="#">FINAL GIRL</a>
             <div class="d-flex">
                 <button class="btn btn-outline-light me-2" id="resetBtn">Reset Game</button>
                 <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#helpModal">How to Play</button>
@@ -45,7 +45,25 @@
                 </div>
             </div>
 
-            <div id="quiz-container" class="p-4 border border-danger rounded bg-black shadow"></div>
+            <div id="quiz-container" class="p-4 border border-danger rounded bg-black shadow">
+                </div>
+        </section>
+
+        <hr class="my-5 border-danger">
+
+        <section class="row justify-content-center mt-5">
+            <div class="col-md-8 bg-black p-4 border border-secondary rounded text-center">
+                <h3 class="text-danger mb-3">Join the Global Survivor List</h3>
+                <p class="text-secondary small">Submit your info to "package" your data into a JSON object in the console.</p>
+                <form id="suggestion-form" class="row g-3 justify-content-center">
+                    <div class="col-md-5">
+                        <input type="email" name="user-email" class="form-control bg-dark text-white border-secondary" placeholder="Email Address" required>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-outline-danger w-100">Submit JSON</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -57,7 +75,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <img src="images/slasher-icon.png" alt="Slasher" style="width: 80px;" class="mb-3">
+                    <img src="images/slasher-icon.png" alt="Slasher Icon" style="width: 80px;" class="mb-3">
                     <p>Every wrong answer brings the Slasher closer. If the bar hits 100%, you're dead!</p>
                 </div>
             </div>
@@ -65,11 +83,11 @@
     </div>
 
     <footer class="container py-4 border-top border-danger mt-5 text-center">
-        <p>Developed by <a href="https://github.com/isabellaorear31-design" class="text-danger">Isabella O'Rear</a></p>
+        <p>Developed by <a href="https://github.com/isabellaorear31-design" class="text-danger" target="_blank" rel="noopener">Isabella O'Rear</a></p>
         <div class="d-flex justify-content-center gap-3">
-            <a href="https://github.com/isabellaorear31-design/horror-trivia" class="btn btn-sm btn-outline-secondary">Repo</a>
-            <a href="https://validator.w3.org/nu/?doc=https://isabellaorear31-design.github.io/horror-trivia/" class="text-info">Nu HTML</a>
-            <a href="https://wave.webaim.org/report#/https://isabellaorear31-design.github.io/horror-trivia/" class="text-info">WAVE</a>
+            <a href="https://github.com/isabellaorear31-design/horror-trivia" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener">Repo</a>
+            <a href="https://validator.w3.org/nu/?doc=https://isabellaorear31-design.github.io/horror-trivia/" class="text-info small" target="_blank" rel="noopener">Nu HTML Check</a>
+            <a href="https://wave.webaim.org/report#/https://isabellaorear31-design.github.io/horror-trivia/" class="text-info small" target="_blank" rel="noopener">WAVE Report</a>
         </div>
     </footer>
 
