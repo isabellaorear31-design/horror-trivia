@@ -32,6 +32,9 @@ The goal of this project is to test the player's knowledge of classic horror mov
 ###  **Wireframe**
 ![Game Wireframe](images/wireframe.png)
 
+### **Dev Process** 
+<a href="https://github.com/isabellaorear31-design/horror-trivia/wiki/Isabella's-Dev-Process" class="btn btn-outline-light btn-sm">Dev Process</a>
+
 ### **Project Structure**
 ```text
 .
