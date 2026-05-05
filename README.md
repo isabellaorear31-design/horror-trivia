@@ -6,7 +6,7 @@
 
 ### **User Story**
 * **As a** horror movie enthusiast,
-* **I want** to test my knowledge of classic slasher films in an interactive environment,
+* **I want** to test my knowledge of classic horror movies in an interactive environment,
 * **So that** I can prove my survival skills and see my name on the survivor list.
 
 ### **Narrative**
